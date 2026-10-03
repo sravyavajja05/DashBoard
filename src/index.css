@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        background-color: #F8F9FA;
+        color: #111111;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .dark body {
+        background-color: #121212;
+        color: #F3F4F6;
+    }
+}
+
+/* ── Custom Dark Mode Utilities ── */
+.dark .bg-gray-50 {
+    background-color: #181818 !important;
+}
+
+.dark .bg-white {
+    background-color: #1E1E1E !important;
+    color: #F3F4F6 !important;
+    border-color: #2D2D2D !important;
+}
+
+.dark .text-gray-900 {
+    color: #F9FAFB !important;
+}
+
+.dark .text-gray-800 {
+    color: #F3F4F6 !important;
+}
+
+.dark .text-gray-700 {
+    color: #E5E7EB !important;
+}
+
+.dark .text-gray-600 {
+    color: #D1D5DB !important;
+}
+
+.dark .text-gray-500 {
+    color: #9CA3AF !important;
+}
+
+.dark .border-gray-100,
+.dark .border-gray-200 {
+    border-color: #2D2D2D !important;
+}
+
+.dark input {
+    background-color: #262626 !important;
+    color: #F9FAFB !important;
+    border-color: #374151 !important;
+}
+
+.dark select {
+    background-color: #262626 !important;
+    color: #F9FAFB !important;
+    border-color: #374151 !important;
+}
+
+/* Dark mode stat card overrides with sleek dark tints */
+.dark .stat-card-green {
+    background-color: #1B2E24 !important;
+}
+
+.dark .stat-card-cream {
+    background-color: #2C261F !important;
+}
+
+.dark .stat-card-pink {
+    background-color: #2D1F23 !important;
+}
+
+.dark .stat-card-purple {
+    background-color: #1F2232 !important;
+}
+
+/* Custom dashboard card utility */
+.dash-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(243, 244, 246, 0.8);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+@media (min-width: 640px) {
+    .dash-card {
+        padding: 24px;
+    }
+}
+
+.dark .dash-card {
+    background-color: #1E1E1E !important;
+    border-color: #2D2D2D !important;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 14px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (min-width: 640px) {
+    .stat-card {
+        border-radius: 20px;
+        padding: 20px;
+    }
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
